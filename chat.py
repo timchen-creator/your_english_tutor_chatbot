@@ -78,7 +78,6 @@ def linebot():
                 line_bot_api.reply_message(tk, AudioSendMessage(original_content_url=msg[1]['url'],
                                                                 duration=msg[1]['duration']))
             if type(msg) == tuple:
-                print("進 tuple")
                 msg_list = [AudioSendMessage(original_content_url=msg[0][1]['url'],
                                                                 duration=msg[0][1]['duration']), ImageSendMessage(original_content_url=msg[1][1],
                                                                 preview_image_url=msg[1][1])]
